@@ -1,0 +1,27 @@
+{
+    "name": "snappdoctor/drcoder",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "heismehrab",
+            "email": "hedayatmanesh.mehrab@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "\\DrCoder\\" : "./"
+        }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DrCoder\\Providers"
+            ]
+        }
+    }
+}
