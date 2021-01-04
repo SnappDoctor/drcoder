@@ -3,9 +3,11 @@
 namespace DrCoder;
 
 use InvalidArgumentException;
-use DrCoder\Traits\SignerTrait;
-use DrCoder\Encoders\AesSslEncoder;
-use DrCoder\Encoders\Base64Encoder;
+
+use DrCoder\Encoders\{
+    AesSslEncoder,
+    Base64Encoder
+};
 
 /**
  * Class EncoderService.
@@ -43,6 +45,30 @@ class EncoderService
     }
 
     /**
+     * Decode the incoming data.
+     *
+     * @param string $data
+     *
+     * @return false|string
+     */
+    public static function base64Decode(string $data)
+    {
+        return base64_decode($data);
+    }
+
+    /**
+     * Encode the incoming data.
+     *
+     * @param string $data
+     *
+     * @return string
+     */
+    public static function base64Encode(string $data)
+    {
+        return base64_encode($data);
+    }
+
+    /**
      * Check the argument that is encoded or not.
      *
      * @param $message
@@ -50,6 +76,6 @@ class EncoderService
      */
     public static function isEncoded($message)
     {
-        return (strpos($message, SignerTrait::$sign) !== false);
+        return (strpos($message, env('ENCODER_SERVICE_SIGN')) !== false);
     }
 }
