@@ -23,7 +23,7 @@ finall, register your package service provider into ``app/condig`` providers arr
 first , call the service:
 
 ``
-use DrCoder\EncoderService;
+use DrCoder\EncoderService\EncoderService;
 ``
 
 for encoding:
@@ -41,3 +41,4 @@ echo $decodedData[0] // your encoded data.
 ``
 
 you can also use associative arrays and get the response with same index keys.
+More example file placed in [here](./Examples) to get better details of this package.
