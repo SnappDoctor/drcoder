@@ -9,7 +9,7 @@
 
 # SnappDoctor Encoder package
 
-This package handle and encode/decode any data;
+This package handle and encode/decode any data.
 The package provide some drivers to encode/decode the data that will explain below.
 
 ## Installation.
