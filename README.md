@@ -35,10 +35,13 @@ $first = "encode_me_1";
 $second = "encode_me_2";
 $base64_encoded_array = EncoderService::driver(EncoderService::DRIVER_BASE64)
                                ->encode([$first, $second]);
+                               
 $first_base64_encoded =  $base64_encoded_array[0];
 $second_base64_encoded =  $base64_encoded_array[1];
+
 $aes_encoded_array = EncoderService::driver(EncoderService::DRIVER_AES_SSL)
                                ->encode([data, data]);
+                               
 $first_aes_encoded =  $aes_encoded_array[0];
 $second_aes_encoded =  $aes_encoded_array[1];
 ```
