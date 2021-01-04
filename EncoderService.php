@@ -1,6 +1,6 @@
 <?php
 
-namespace DrCoder\EncoderService;
+namespace DrCoder;
 
 use InvalidArgumentException;
 use DrCoder\Traits\SignerTrait;
