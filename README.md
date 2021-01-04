@@ -25,7 +25,7 @@ finall, register your package service provider into ```config/app.php``` provide
 first , call the service:
 
 ```php
-use DrCoder\EncoderService\EncoderService;
+use DrCoder\EncoderService;
 ```
 
 for encoding:
