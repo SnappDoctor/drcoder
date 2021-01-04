@@ -24,7 +24,7 @@ class DrCoderServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/encoder.php' => config_path('encoder_service.php'),
+            __DIR__ . '/../config/encoder.php' => config_path('encoder_service.php'),
         ], 'encoder-service');
     }
 }

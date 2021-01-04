@@ -46,7 +46,7 @@ class AesSslEncoder extends BaseEncoder implements EncoderInterface
      * @return void
      */
     public static function setMode(string $mode) {
-        static::$mode = constant("MCRYPT_MODE_{$mode}");
+        static::$mode = $mode;
     }
 
     /**
@@ -138,11 +138,12 @@ class AesSslEncoder extends BaseEncoder implements EncoderInterface
                 foreach ($keys as $key) {
                     $result[$item][$key] = $unsigned
                         ? trim(mcrypt_decrypt(
-                            static::$cipher, static::$key, base64_decode(self::unsigned($result[$item][$key])), static::$mode, static::getIV()
-                        ))
+                            static::$cipher, static::$key, base64_decode(self::unsigned($result[$item][$key])),
+                            static::$mode, static::getIV()))
+
                         : self::sign(trim(mcrypt_decrypt(
-                            static::$cipher, static::$key, base64_decode(self::unsigned($result[$item][$key])), static::$mode, static::getIV())
-                        ));
+                            static::$cipher, static::$key, base64_decode(self::unsigned($result[$item][$key])),
+                            static::$mode, static::getIV())));
                 }
 
                 continue;
