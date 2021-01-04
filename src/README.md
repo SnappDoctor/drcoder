@@ -91,4 +91,4 @@ $second_aes_decoded =  $aes_decoded_array[1];
 ```
 
 you can also use associative arrays and get the response with same index keys.
-More example file placed in [here](./Examples) to get better details of this package.
+More example file placed in [here](Examples) to get better details of this package.
