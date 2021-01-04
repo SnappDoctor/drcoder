@@ -46,7 +46,7 @@ class AesSslEncoder extends BaseEncoder implements EncoderInterface
      * @return void
      */
     public static function setMode(string $mode) {
-        static::$mode = constant("MCRYPT_MODE_{$mode}");
+        static::$mode = $mode;
     }
 
     /**
