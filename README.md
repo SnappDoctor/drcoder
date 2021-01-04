@@ -33,6 +33,7 @@ for encoding:
 ```php
 $first = "encode_me_1";
 $second = "encode_me_2";
+
 $base64_encoded_array = EncoderService::driver(EncoderService::DRIVER_BASE64)
                                ->encode([$first, $second]);
                                
@@ -40,7 +41,7 @@ $first_base64_encoded =  $base64_encoded_array[0];
 $second_base64_encoded =  $base64_encoded_array[1];
 
 $aes_encoded_array = EncoderService::driver(EncoderService::DRIVER_AES_SSL)
-                               ->encode([data, data]);
+                               ->encode([$first, $second]);
                                
 $first_aes_encoded =  $aes_encoded_array[0];
 $second_aes_encoded =  $aes_encoded_array[1];
@@ -49,11 +50,20 @@ $second_aes_encoded =  $aes_encoded_array[1];
 for decoding:
 
 ```php
+$first = "decode_me_1";
+$second = "decode_me_2";
+
 $base64_decoded_array = EncoderService::driver(EncoderService::DRIVER_BASE64)
-                               ->decode([encoded data, encoded data]);
+                               ->decode([$first, $second]);
+                               
+$first_base64_decoded =  $base64_decoded_array[0];
+$second_base64_decoded =  $base64_decoded_array[1];
+
 $aes_decoded_array = EncoderService::driver(EncoderService::DRIVER_BASE64)
-                               ->decode([encoded data, encoded data]);
-echo $decodedData[0]; // your encoded data.
+                               ->decode([$first, $second]);
+
+$first_aes_decoded =  $aes_decoded_array[0];
+$second_aes_decoded =  $aes_decoded_array[1];
 ```
 
 you can also use associative arrays and get the response with same index keys.
