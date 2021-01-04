@@ -35,11 +35,11 @@ $ php artisan vendor:publish
 The package use env variables that encode/decode process need it to work, so you have to add these variables to your `.env` file:
 
 ```bash
-ENCODER_SERVICE_IV=
-ENCODER_SERVICE_KEY=
-ENCODER_SERVICE_MODE=
-ENCODER_SERVICE_SIGN=
-ENCODER_SERVICE_BLOCK_SIZE=
+ENCODER_SERVICE_IV=SECRET_IV
+ENCODER_SERVICE_KEY=SECRET_KEY
+ENCODER_SERVICE_MODE=SECRET_MODE
+ENCODER_SERVICE_SIGN=SECRET_SIGN
+ENCODER_SERVICE_BLOCK_SIZE=BLOCK_SIZE
 ```
 
 finall, register your package service provider into ```config/app.php``` providers array.
