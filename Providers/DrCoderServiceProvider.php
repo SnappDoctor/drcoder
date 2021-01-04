@@ -13,7 +13,7 @@ class DrCoderServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/encoder.php', 'encoder_service');
+        //
     }
 
     /**
@@ -23,6 +23,8 @@ class DrCoderServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__.'/../config/encoder.php' => config_path('encoder_service.php'),
+        ], '');
     }
 }
