@@ -1,6 +1,6 @@
 <?php
 
-namespace teleyare\Services\EncoderService;
+namespace DrCoder\EncoderService;
 
 use InvalidArgumentException;
 use DrCoder\Traits\SignerTrait;
@@ -28,7 +28,7 @@ class EncoderService
      *
      * @return mixed
      */
-    public static function driver(string $driver)
+    public static function driver(string $driver = self::DRIVER_AES_SSL)
     {
         switch ($driver) {
             case self::DRIVER_BASE64:
