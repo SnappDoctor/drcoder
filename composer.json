@@ -15,5 +15,13 @@
         "psr-4": {
             "\\DrCoder\\" : "./"
         }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DrCoder\\Providers\\DrCoderServiceProvider"
+            ]
+        }
     }
 }
