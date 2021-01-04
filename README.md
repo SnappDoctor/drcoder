@@ -18,7 +18,7 @@ then use this command if needed:
 php artisan vendor:publish
 ```
 
-finall, register your package service provider into ``app/condig`` providers array.
+finall, register your package service provider into ```app/condig.php``` providers array.
 
 ## How it works?
 
@@ -31,15 +31,15 @@ use DrCoder\EncoderService\EncoderService;
 for encoding:
 
 ```php
-$encodedData = EncoderService::driver(EncoderService::DRIVER_BASE64)->encode([data, data])
-echo $encodedData[0] // your encoded data.
+$encodedData = EncoderService::driver(EncoderService::DRIVER_BASE64)->encode([data, data]);
+echo $encodedData[0]; // your encoded data.
 ```
 
 for decoding:
 
 ```php
-$decodedData = EncoderService::driver(EncoderService::DRIVER_BASE64)->decode([encoded data, encoded data])
-echo $decodedData[0] // your encoded data.
+$decodedData = EncoderService::driver(EncoderService::DRIVER_BASE64)->decode([encoded data, encoded data]);
+echo $decodedData[0]; // your encoded data.
 ```
 
 you can also use associative arrays and get the response with same index keys.
