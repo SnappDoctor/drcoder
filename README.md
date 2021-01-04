@@ -8,14 +8,14 @@ The package provide some drivers to encode/decode the data that will explain bel
 install via composer: 
 
 ```bash
-composer require snappdoctor/drcoder
+$ composer require snappdoctor/drcoder
 ```
 
 
 then use this command if needed:
 
 ```bash
-php artisan vendor:publish
+$ php artisan vendor:publish
 ```
 
 finall, register your package service provider into ```config/app.php``` providers array.
