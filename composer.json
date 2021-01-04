@@ -8,15 +8,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {
-
-    },
-    "autoload": {
-        "psr-4": {
-            "\\DrCoder\\" : "./"
-        }
-    },
-
+    "require": {},
     "extra": {
         "laravel": {
             "providers": [
