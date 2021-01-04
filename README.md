@@ -1,4 +1,10 @@
-# Encoder package
+<p align="center"><a href="https://snapp.doctor" target="_blank"><img src="https://snapp.doctor/static/media/snap_header.81dda777.png" width="200"></a></p>
+<p align="center">
+<a href="https://packagist.org/packages/snappmarket/smnotif-php-bridge"><img src="https://poser.pugx.org/snappmarket/smnotif-php-bridge/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/snappmarket/smnotif-php-bridge"><img src="https://poser.pugx.org/snappmarket/smnotif-php-bridge/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/snappmarket/smnotif-php-bridge"><img src="https://poser.pugx.org/snappmarket/smnotif-php-bridge/license.svg" alt="License"></a>
+<a href="https://packagist.org/packages/snappmarket/smnotif-php-bridge"><img src="https://poser.pugx.org/snappmarket/smnotif-php-bridge/composerlock" alt="License"></a>
+</p># SnappDoctor Encoder package
 
 This package handle and encode/decode any data;
 The package provide some drivers to encode/decode the data that will explain below.
