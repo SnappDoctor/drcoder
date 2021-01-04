@@ -1,6 +1,15 @@
-# Encoder package
+<p align="center"><a href="https://snapp.doctor" target="_blank"><img src="https://snapp.doctor/static/media/snap_header.81dda777.png" width="200"></a></p>
+<p align="center">
+<a href="https://packagist.org/packages/snappmarket/smnotif-php-bridge"><img src="https://poser.pugx.org/snappmarket/smnotif-php-bridge/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/snappmarket/smnotif-php-bridge"><img src="https://poser.pugx.org/snappmarket/smnotif-php-bridge/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/snappmarket/smnotif-php-bridge"><img src="https://poser.pugx.org/snappmarket/smnotif-php-bridge/license.svg" alt="License"></a>
+<a href="https://packagist.org/packages/snappmarket/smnotif-php-bridge"><img src="https://poser.pugx.org/snappmarket/smnotif-php-bridge/composerlock" alt="License"></a>
+</p>
 
-This package handle and encode/decode any data;
+
+# SnappDoctor Encoder package
+
+This package handle and encode/decode any data.
 The package provide some drivers to encode/decode the data that will explain below.
 
 ## Installation.
@@ -8,38 +17,62 @@ The package provide some drivers to encode/decode the data that will explain bel
 install via composer: 
 
 ```bash
-composer require snappdoctor/drcoder
+$ composer require snappdoctor/drcoder
 ```
 
 
 then use this command if needed:
 
 ```bash
-php artisan vendor:publish
+$ php artisan vendor:publish
 ```
 
-finall, register your package service provider into ```app/condig.php``` providers array.
+finall, register your package service provider into ```config/app.php``` providers array.
 
 ## How it works?
 
 first , call the service:
 
 ```php
-use DrCoder\EncoderService\EncoderService;
+use DrCoder\EncoderService;
 ```
 
 for encoding:
 
 ```php
-$encodedData = EncoderService::driver(EncoderService::DRIVER_BASE64)->encode([data, data]);
-echo $encodedData[0]; // your encoded data.
+$first = "encode_me_1";
+$second = "encode_me_2";
+
+$base64_encoded_array = EncoderService::driver(EncoderService::DRIVER_BASE64)
+                               ->encode([$first, $second]);
+                               
+$first_base64_encoded =  $base64_encoded_array[0];
+$second_base64_encoded =  $base64_encoded_array[1];
+
+$aes_encoded_array = EncoderService::driver(EncoderService::DRIVER_AES_SSL)
+                               ->encode([$first, $second]);
+                               
+$first_aes_encoded =  $aes_encoded_array[0];
+$second_aes_encoded =  $aes_encoded_array[1];
 ```
 
 for decoding:
 
 ```php
-$decodedData = EncoderService::driver(EncoderService::DRIVER_BASE64)->decode([encoded data, encoded data]);
-echo $decodedData[0]; // your encoded data.
+$first = "decode_me_1";
+$second = "decode_me_2";
+
+$base64_decoded_array = EncoderService::driver(EncoderService::DRIVER_BASE64)
+                               ->decode([$first, $second]);
+                               
+$first_base64_decoded =  $base64_decoded_array[0];
+$second_base64_decoded =  $base64_decoded_array[1];
+
+$aes_decoded_array = EncoderService::driver(EncoderService::DRIVER_BASE64)
+                               ->decode([$first, $second]);
+
+$first_aes_decoded =  $aes_decoded_array[0];
+$second_aes_decoded =  $aes_decoded_array[1];
 ```
 
 you can also use associative arrays and get the response with same index keys.
