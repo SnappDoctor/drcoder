@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DrCoder\\Providers"
+                "DrCoder\\Providers\\DrCoderServiceProvider"
             ]
         }
     }
