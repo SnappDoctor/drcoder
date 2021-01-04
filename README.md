@@ -5,6 +5,8 @@
 <a href="https://packagist.org/packages/snappmarket/smnotif-php-bridge"><img src="https://poser.pugx.org/snappmarket/smnotif-php-bridge/license.svg" alt="License"></a>
 <a href="https://packagist.org/packages/snappmarket/smnotif-php-bridge"><img src="https://poser.pugx.org/snappmarket/smnotif-php-bridge/composerlock" alt="License"></a>
 </p>
+
+
 # SnappDoctor Encoder package
 
 This package handle and encode/decode any data;
