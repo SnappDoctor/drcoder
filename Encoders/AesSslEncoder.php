@@ -49,10 +49,18 @@ class AesSslEncoder extends BaseEncoder implements EncoderInterface
         static::$mode = constant("MCRYPT_MODE_{$mode}");
     }
 
+    /**
+     * @param $IV
+     *
+     * @return void
+     */
     public static function setIV($IV) {
         static::$IV = $IV;
     }
 
+    /**
+     * @return mixed
+     */
     protected static function getIV() {
 
         if (static::$IV == "") {
