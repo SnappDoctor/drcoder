@@ -18,7 +18,7 @@ then use this command if needed:
 php artisan vendor:publish
 ```
 
-finall, register your package service provider into ```app/condig.php``` providers array.
+finall, register your package service provider into ```config/app.php``` providers array.
 
 ## How it works?
 
