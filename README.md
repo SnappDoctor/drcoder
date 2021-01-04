@@ -31,14 +31,16 @@ use DrCoder\EncoderService\EncoderService;
 for encoding:
 
 ```php
-$encodedData = EncoderService::driver(EncoderService::DRIVER_BASE64)->encode([data, data]);
+$encodedData = EncoderService::driver(EncoderService::DRIVER_BASE64)
+                               ->encode([data, data]);
 echo $encodedData[0]; // your encoded data.
 ```
 
 for decoding:
 
 ```php
-$decodedData = EncoderService::driver(EncoderService::DRIVER_BASE64)->decode([encoded data, encoded data]);
+$decodedData = EncoderService::driver(EncoderService::DRIVER_BASE64)
+                               ->decode([encoded data, encoded data]);
 echo $decodedData[0]; // your encoded data.
 ```
 
