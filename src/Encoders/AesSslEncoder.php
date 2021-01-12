@@ -27,7 +27,7 @@ class AesSslEncoder extends BaseEncoder implements EncoderInterface
      *
      * @return void
      */
-    public static function setKey(string $key) {
+    public static function setKey($key) {
         static::$key = $key;
     }
 
@@ -36,7 +36,7 @@ class AesSslEncoder extends BaseEncoder implements EncoderInterface
      *
      * @return void
      */
-    public static function setBlockSize(string $blockSize) {
+    public static function setBlockSize($blockSize) {
         static::$cipher = $blockSize;
     }
 
@@ -45,7 +45,7 @@ class AesSslEncoder extends BaseEncoder implements EncoderInterface
      *
      * @return void
      */
-    public static function setMode(string $mode) {
+    public static function setMode($mode) {
         static::$mode = $mode;
     }
 

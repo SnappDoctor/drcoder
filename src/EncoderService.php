@@ -18,8 +18,8 @@ class EncoderService
      * @var string DRIVER_BASE64
      * @var string DRIVER_AES_SSL
      */
-    public const DRIVER_BASE64 = 'base64';
-    public const DRIVER_AES_SSL = 'aes-ssl';
+    const DRIVER_BASE64 = 'base64';
+    const DRIVER_AES_SSL = 'aes-ssl';
 
     /**
      * Return selected encoder class via driver parameter.
@@ -28,7 +28,7 @@ class EncoderService
      *
      * @return mixed
      */
-    public static function driver(string $driver = self::DRIVER_AES_SSL)
+    public static function driver($driver = self::DRIVER_AES_SSL)
     {
         switch ($driver) {
             case self::DRIVER_BASE64:
@@ -49,7 +49,7 @@ class EncoderService
      *
      * @return false|string
      */
-    public static function base64Decode(string $data)
+    public static function base64Decode($data)
     {
         return base64_decode($data);
     }
@@ -61,7 +61,7 @@ class EncoderService
      *
      * @return string
      */
-    public static function base64Encode(string $data)
+    public static function base64Encode($data)
     {
         return base64_encode($data);
     }
