@@ -4,10 +4,8 @@ namespace DrCoder;
 
 use InvalidArgumentException;
 
-use DrCoder\Encoders\{
-    AesSslEncoder,
-    Base64Encoder
-};
+use DrCoder\Encoders\AesSslEncoder;
+use DrCoder\Encoders\Base64Encoder;
 
 /**
  * Class EncoderService.
