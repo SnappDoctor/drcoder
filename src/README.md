@@ -13,12 +13,19 @@ The package provide some drivers to encode/decode the data that will explain bel
 
 ## Installation.
 
+Before anything, The developer has to know witch Encoder class 
+uses the built-in hash functions to do the process, so according
+to your PHP version you have to configure appropriate hashing drivers in your setup;
+for now we assume that you use version `< 7.0` of PHP, otherwise you have to manually enable the `mcrypt` extension
+basic on your current version.
+
 install via composer: 
 
 ```bash
 $ composer require snappdoctor/drcoder
 ```
 
+for legacy version of laravel you have to add ``DrCoderServiceProvider::class`` into ```config/app.php``` providers array.
 
 then use this command if needed:
 
@@ -26,7 +33,15 @@ then use this command if needed:
 $ php artisan vendor:publish
 ```
 
-finall, register your package service provider into ```config/app.php``` providers array.
+The package use env variables that encode/decode process need it to work, so you have to add these variables to your `.env` file:
+
+```bash
+ENCODER_SERVICE_IV=
+ENCODER_SERVICE_KEY=
+ENCODER_SERVICE_MODE=
+ENCODER_SERVICE_SIGN=
+ENCODER_SERVICE_BLOCK_SIZE=
+```
 
 ## How it works?
 
@@ -75,4 +90,4 @@ $second_aes_decoded =  $aes_decoded_array[1];
 ```
 
 you can also use associative arrays and get the response with same index keys.
-More example file placed in [here](./Examples) to get better details of this package.
+More example file placed in [here](Examples) to get better details of this package.
