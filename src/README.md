@@ -25,6 +25,7 @@ install via composer:
 $ composer require snappdoctor/drcoder
 ```
 
+for legacy version of laravel you have to add ``DrCoderServiceProvider::class`` into ```config/app.php``` providers array.
 
 then use this command if needed:
 
@@ -41,8 +42,6 @@ ENCODER_SERVICE_MODE=
 ENCODER_SERVICE_SIGN=
 ENCODER_SERVICE_BLOCK_SIZE=
 ```
-
-finall, register your package service provider into ```config/app.php``` providers array.
 
 ## How it works?
 
